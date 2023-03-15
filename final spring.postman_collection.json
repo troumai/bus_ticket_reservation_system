@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "1d8a8b38-570c-42f1-9e78-c4415f0a6cce",
+		"name": "final spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18399279"
+	},
+	"item": [
+		{
+			"name": "create bus",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "tom456",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "456",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"registerNumber\": \"32158\",\r\n    \"seatsNumber\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bus/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bus",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create trip",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "tom456",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "456",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destination\":\"Almaty\",\r\n    \"price\": 53000,\r\n    \"routeId\":1,\r\n    \"arrivalDate\":\"2022-05-16\",\r\n    \"departureDate\":\"2022-05-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trips/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create bus route",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "tom456",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "456",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1 ,\r\n    \"busId\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/busRoute/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"busRoute",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buy ticket",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "tom456",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "456",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tripId\": 1,\r\n    \"userId\": 1,\r\n    \"seat\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ticket/buy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket",
+						"buy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "permit ticket",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "tom456",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "456",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"tomiris\",\r\n    \"ticketId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ticket/permit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket",
+						"permit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get trips",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "tom456",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "456",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/trips/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
